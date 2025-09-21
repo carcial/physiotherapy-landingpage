@@ -67,6 +67,7 @@ export default function Header() {
                   ? "underline underline-offset-4 font-semibold"
                   : ""
               }`}
+              onClick={() => setIsOpen(false)} // 👈 This is what was missing
             >
               {link.label}
             </Link>
@@ -74,6 +75,7 @@ export default function Header() {
           <Link
             href="/kontakt"
             className="block mt-3 bg-white text-blue-800 px-4 py-2 rounded-full text-center shadow-md hover:bg-gray-100 transition"
+            onClick={() => setIsOpen(false)} // 👈 Add this too for consistency
           >
             Termin vereinbaren
           </Link>
